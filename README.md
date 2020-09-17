@@ -1,4 +1,4 @@
-#What To Watch
+# What To Watch
 
 ## Developers
 * Christian Hodges, [chodges7](https://github.com/chodges7)
