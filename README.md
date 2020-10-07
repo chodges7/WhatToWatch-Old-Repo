@@ -18,6 +18,7 @@
 
 ### How to get it running
 * boot up the virtual enviornment by running the command  
+<<<<<<< HEAD
 Mac: ```source bin/activate```  
 Windows: ```whattowatch/bin/activate```  
 * next install the requirements  
@@ -34,8 +35,14 @@ Windows: ```py manage.py runserver```
 =======
 >>>>>>> df58057... Update README.md
 * there also might be some migrations that need to happen in the database so run this command
+=======
+```source bin/activate```
+* next install the requirements  
+```pip install -r requirements.txt```
+* there also might be some migrations that need to happen in the database so run this command  
+>>>>>>> d2e77b3... Update README.md
 ```python3 manage.py migrate```
-* finally, boot up the local server
+* finally, boot up the local server  
 ```python3 manage.py runserver```
 >>>>>>> Update README.md
 
