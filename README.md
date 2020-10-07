@@ -22,11 +22,18 @@ Mac: ```source bin/activate```
 Windows: ```whattowatch/bin/activate```  
 * next install the requirements  
 ```pip install -r requirements.txt```
+<<<<<<< HEAD
 * there also might be some migrations that need to happen in the database so run this command  
 Mac: ```python3 manage.py migrate```  
 Windows: ```py manage.py migrate```  
 * finally, boot up the local server  
 Mac: ```python3 manage.py runserver```  
 Windows: ```py manage.py runserver```
+=======
+* there also might be some migrations that need to happen in the database so run this command
+```python3 manage.py migrate```
+* finally, boot up the local server
+```python3 manage.py runserver```
+>>>>>>> Update README.md
 
 The website should be avalible on the local host website [http://127.0.0.1:8000](http://127.0.0.1:8000)
