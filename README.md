@@ -16,13 +16,13 @@
 * python3
 
 ### How to get it running
-* boot up the virtual enviornment by running the command
+* boot up the virtual enviornment by running the command  
 ```source bin/activate```
-* next install the requirements
+* next install the requirements  
 ```pip install -r requirements.txt```
-* there also might be some migrations that need to happen in the database so run this command
+* there also might be some migrations that need to happen in the database so run this command  
 ```python3 manage.py migrate```
-* finally, boot up the local server
+* finally, boot up the local server  
 ```python3 manage.py runserver```
 
 The website should be avalible on the local host website [http://127.0.0.1:8000](http://127.0.0.1:8000)
