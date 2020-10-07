@@ -20,6 +20,8 @@
 ```source bin/activate```
 * next install the requirements
 ```pip install -r requirements.txt```
+* there also might be some migrations that need to happen in the database so run this command
+```python3 manage.py migrate```
 * finally, boot up the local server
 ```python3 manage.py runserver```
 
