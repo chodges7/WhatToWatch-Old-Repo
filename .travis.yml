@@ -2,5 +2,4 @@ language: cpp
 
 script:
  - docker-compose build web
- - docker-compose run web /bin/bash
- - python manage.py migrate
+ - docker-compose up
