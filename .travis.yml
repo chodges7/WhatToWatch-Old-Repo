@@ -1,6 +1,5 @@
 language: cpp
 
 script:
- - cd /whattowatch
  - docker-compose build web
  - docker-compose up
