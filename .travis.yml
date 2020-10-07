@@ -1,1 +1,4 @@
 language: cpp
+
+script:
+ - docker-compose up
