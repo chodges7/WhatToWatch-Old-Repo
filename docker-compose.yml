@@ -10,10 +10,16 @@ services:
     links:
        - redis:redis
     command: python /code/manage.py runserver 0.0.0.0:8000
+
   nginx:
      build: ./nginx/
+     depends on:
+       - web
      ports:
        - 80:80
+     links:
+       - web:web
+
   redis:
     image: redis:latest
     expose:
