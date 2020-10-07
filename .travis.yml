@@ -1,4 +1,5 @@
 language: cpp
 
 script:
+ - docker-compose build web
  - docker-compose up
