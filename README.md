@@ -37,3 +37,6 @@ Windows: ```py manage.py runserver```
 >>>>>>> Update README.md
 
 The website should be avalible on the local host website [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG)
+#Our Logo
