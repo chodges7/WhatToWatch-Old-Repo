@@ -1,9 +1,9 @@
 from django.contrib.auth import login, logout
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from .models import UserM
 from .forms import UserF
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate , login
 def home(request):
     return render(request,'home.html',{'name':'LineUp Login Signup'})
 
