@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG)
+=======
+![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG) 
+>>>>>>> e2d40d6... Update README.md
 # What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
 
 ## Developers
@@ -30,6 +34,3 @@ Mac: ```python3 manage.py runserver```
 Windows: ```py manage.py runserver```
 
 The website should be avalible on the local host website [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG)
-#Our Logo
