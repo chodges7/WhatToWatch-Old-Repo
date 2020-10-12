@@ -1,3 +1,4 @@
+![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG) 
 # What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
 
 ## Developers
@@ -5,7 +6,7 @@
 * Scrum Master: Lukas Pecson, [lpecson](https://github.com/lpecson)
 * Developer: Vidit Dhaka, [vdhaka](https://github.com/vdhaka)
 
-## Entrepreneur
+## Entrepreneurs
 * Matthew Martell
 * Nate Rehm
 * Nicholas Whitley
@@ -29,6 +30,3 @@ Mac: ```python3 manage.py runserver```
 Windows: ```py manage.py runserver```
 
 The website should be avalible on the local host website [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
-![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG)
-#Our Logo
