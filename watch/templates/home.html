@@ -1,39 +1,8 @@
+{% load static %}
+{% include "base.html" %}
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Whattowatch</title>
-  </head>
-  <body class="" style="background-image: url('https://bestofsno.com/wp-content/uploads/2019/11/IMG_5463-900x600.jpg');">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
-        <a class="navbar-brand" href="/home">Whattowatch</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav navbar-right">
-            <li class="nav-item active">
-              <a class="nav-link" href="/login_view">Login<span class="sr-only">(current)</span></a>
-            </li>
-		      </ul>
-		    </div>
-		  <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
-			<ul class="navbar-nav navbar-right">
-            	<li class="nav-item active">
-              	<a class="nav-link" href="/signup">Signup<span class="sr-only">(current)</span></a>
-            	</li>
-			  </ul>
-		</div>
-      </nav>
       <br/>
-      <div class="container">   
+      <div class="container">
         {% block content %}
         {% endblock %}
       </div>
