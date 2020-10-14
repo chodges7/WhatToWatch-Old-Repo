@@ -18,7 +18,7 @@
 							Click here to edit your profile
 						</button>
 						<transition name="fade">
-							<form action="/profile_page/" method="post" v-if="show">
+							<form action="/profilePage/" method="post" v-if="show">
 								{% csrf_token %}
 								<h5 class="text-center">Type your new bio here:</h5>
 								{{ form }}
