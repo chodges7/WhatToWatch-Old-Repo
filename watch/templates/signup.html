@@ -1,6 +1,6 @@
 {% load static %}
 {% include "base.html" %}
-
+{% block content %}
       <div class="row text-right">
       <div class="col-4 mt-5"></div>
 
@@ -8,13 +8,18 @@
     <form method="POST" >
        {% csrf_token %}
        <h4 class="text-center">Register</h4>
+       <!--{{ form }}-->
        			{{ form.errors }}
        			{{ form.username.label_tag }}
        			{{ form.username }} <br>
        			{{ form.email.label_tag }}
        			{{ form.email }} <br>
-       			{{ form.password.label_tag }}
-       			{{ form.password }} <br>
+       			{{ form.password1.label_tag }}
+       			{{ form.password1 }} <br>
+            {{ form.password2.label_tag }}
+       			{{ form.password2 }} <br>
+            <!--{{ form.profile_image.label_tag }}
+            {{ form.profile_image }}-->
             <h4 class="text-center">Register your profile</h4>
             {{ form.profile_fname.label_tag }}
             {{ form.profile_fname }} <br>
@@ -25,6 +30,7 @@
        			<input type="submit" class="button expanded" value="Register" />
     </form>
   </div>
+  {% endblock %}
 
 </body>
 </html>

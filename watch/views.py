@@ -26,7 +26,7 @@ def profile_view(request):
             prof.profile_bio = form.cleaned_data["profile_bio"]
             prof.save()
             form = forms.BioForm()
-            return redirect("/")
+            return redirect("/profilePage/")
     else:
         form = forms.BioForm()
     context = {
@@ -34,7 +34,7 @@ def profile_view(request):
         "form":form,
         "title":"Profile Page",
         "bio":prof.profile_bio,
-        "profile_picture":prof.profile_image.url,
+        #"profile_picture":prof.profile_image.url,
     }
     return render(request, "profile_page.html", context=context)
 
