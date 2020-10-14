@@ -13,19 +13,19 @@
 					<img src="{{ profile_picture }}" width="200" alt="Your profile picture!"/>
 					<h4><u>Your bio:</u></h4>
 					<h5>{{ bio }}</h5><p>
-						<div id="app-3">
-							<button class="button" v-on:click="show = !show">
-								Click here to edit your profile
-							</button>
-							<transition name="fade">
-								<form action="/profilePage/" method="post" v-if="show">
-									{% csrf_token %}
-									<h5 class="text-center">Type your new bio here:</h5>
-									{{ form }}
-									<input type="submit" class="button" value="Edit" />
-								</form>
-							</transition>
-						</p>
+					<div id="app-3">
+						<button class="button" v-on:click="show = !show">
+							Click here to edit your profile
+						</button>
+						<transition name="fade">
+							<form action="/profilePage/" method="post" v-if="show">
+								{% csrf_token %}
+								<h5 class="text-center">Type your new bio here:</h5>
+								{{ form }}
+								<input type="submit" class="button" value="Edit" />
+							</form>
+						</transition>
+					</p>
 					</div>
 				</div>
 			</div>
