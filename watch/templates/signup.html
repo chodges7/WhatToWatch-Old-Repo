@@ -5,7 +5,7 @@
       <div class="col-4 mt-5"></div>
 
   <div class="col-4 mt-5 p-5 text-left bg-white">
-    <form method="POST" >
+    <form method="POST" enctype='multipart/form-data'>
        {% csrf_token %}
        <h4 class="text-center">Register</h4>
        <!--{{ form }}-->
@@ -18,9 +18,9 @@
        			{{ form.password1 }} <br>
             {{ form.password2.label_tag }}
        			{{ form.password2 }} <br>
-            <!--{{ form.profile_image.label_tag }}
-            {{ form.profile_image }}-->
-            <h4 class="text-center">Register your profile</h4>
+            {{ form.profile_image.label_tag }}
+            {{ form.profile_image }}
+            <h5 class="text-center">Register your profile</h4>
             {{ form.profile_fname.label_tag }}
             {{ form.profile_fname }} <br>
             {{ form.profile_lname.label_tag }}

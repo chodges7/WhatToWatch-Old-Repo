@@ -34,7 +34,7 @@ def profile_view(request):
         "form":form,
         "title":"Profile Page",
         "bio":prof.profile_bio,
-        #"profile_picture":prof.profile_image.url,
+        "profile_picture":prof.profile_image.url,
     }
     return render(request, "profile_page.html", context=context)
 
