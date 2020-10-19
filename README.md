@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG)
-=======
-![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG) 
->>>>>>> e2d40d6... Update README.md
 # What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
 
 ## Developers
