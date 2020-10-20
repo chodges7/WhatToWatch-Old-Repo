@@ -14,7 +14,7 @@ class Profile(models.Model):
     profile_lname = models.CharField(max_length=50)
     profile_bio = models.CharField(max_length=500)
     profile_user = models.ForeignKey(User, on_delete=models.CASCADE)
-    #profile_image = models.ImageField(upload_to='profile-pics')
+    profile_image = models.ImageField(upload_to='watch/static/profile-pics', default='static/LogoColor.JPG', null=True, blank=True)
 
     def __str__(self):
         name = self.profile_fname + " " + profile_lname

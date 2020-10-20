@@ -26,7 +26,7 @@ def profile_view(request):
             prof.profile_bio = form.cleaned_data["profile_bio"]
             prof.save()
             form = forms.BioForm()
-            return redirect("/profilePage/")
+            return redirect('/profilePage/')
     else:
         form = forms.BioForm()
     context = {
@@ -34,7 +34,7 @@ def profile_view(request):
         "form":form,
         "title":"Profile Page",
         "bio":prof.profile_bio,
-        #"profile_picture":prof.profile_image.url,
+        "profile_picture":prof.profile_image.url,
     }
     return render(request, "profile_page.html", context=context)
 
@@ -45,7 +45,7 @@ def login_view(request):
         if form.is_valid():
           user = form.get_user()
           login(request, user)
-          return redirect('/home')
+          return redirect('/home/')
     else:
         form = AuthenticationForm()
     return render(request,'login.html',{'name':'LineUp login Signup','form':form})
