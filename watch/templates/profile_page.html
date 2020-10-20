@@ -6,11 +6,11 @@
 	{% if user.is_authenticated %}
 	<h3 class="text-center">{{ body }}</h3>
 	<div class="grid-x medium-offset-2 small-offset-2 large-offset-2">
-		<div class="large-10 cell medium-10 small-10">
-			<div class="card-info secondary grid-padding-x">
-				<div class="card-info-content">
+		<div class="large-9 medium-9 small-9 cell">
+			<div class="card secondary grid-padding-x">
+				<div class="card-section">
 					<h4><u>Your picture:</u></h4>
-					<img src="{{ profile_picture }}" width="200" alt="Your profile picture!"/>
+					<img src="{% static profile_picture %}" width="200" alt="Your profile picture!"/>
 					<h4><u>Your bio:</u></h4>
 					<h5>{{ bio }}</h5><p>
 					<div id="app-3">
