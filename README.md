@@ -15,6 +15,7 @@
 ### Dependancies that you need:
 * pip
 * python3
+* pillow
 
 ### How to get it running
 * boot up the virtual enviornment by running the command  
