@@ -8,15 +8,5 @@ variables:
 services:
 - docker:dind
 
-stages:
-    - lint
-    
-#Run pylint_django on site/app code given default app/site folder names
-pylint:
-  #image: "$CI_REGISTRY_IMAGE:testing"
-  stage: lint
-  script:
-    - python -V
-    #Change paths to your project/app folders
-   #- pylint --load-plugins pylind_django --disable=missing-docstring ./whattowatch/watch
+script:
     - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
