@@ -1,4 +1,5 @@
-![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG) 
+<img src="LogoColor.png" alt="logo" width="200">
+
 # What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
 
 ## Developers
