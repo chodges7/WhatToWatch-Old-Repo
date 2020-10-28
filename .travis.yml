@@ -1,10 +1,9 @@
-language: cpp
 os: linux
 image: docker:latest
 # When using dind, it's wise to use the overlayfs driver for
 # improved performance.
 variables:
-  #DOCKER_DRIVER: overlay
+  DOCKER_DRIVER: overlay
 services:
 - docker:dind
 
