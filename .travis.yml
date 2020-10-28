@@ -1,5 +1,9 @@
 language: cpp
-
+os: linux
+install: pip install --user cpplint
 script:
- - docker-compose build web
- - docker-compose up
+    - pip install cpplint
+    - cpplint *.cpp
+    - python -V
+    #Change paths to your project/app folders
+    - pylint --load-plugins pylint_django --disable=missing-docstring ./Watch
