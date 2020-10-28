@@ -1,5 +1,5 @@
-language: cpp
+language: python
+os: linux
 
 script:
- - docker-compose build web
- - docker-compose up
+    - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch/watch

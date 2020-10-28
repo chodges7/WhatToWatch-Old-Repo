@@ -1,4 +1,4 @@
-![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG)
+![logo](https://github.com/ChicoState/WhatToWatch/blob/master/Logo.JPG) 
 # What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
 
 ## Developers
@@ -15,6 +15,7 @@
 ### Dependancies that you need:
 * pip
 * python3
+* pillow
 
 ### How to get it running
 * boot up the virtual enviornment by running the command  
