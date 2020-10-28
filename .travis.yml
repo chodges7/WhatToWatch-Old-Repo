@@ -1,3 +1,4 @@
+language: python
 os: linux
 image: docker:latest
 # When using dind, it's wise to use the overlayfs driver for
