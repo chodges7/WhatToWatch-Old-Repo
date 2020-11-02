@@ -2,4 +2,4 @@ language: python
 os: linux
 
 script:
-    - pylint --load-plugins pylint_django --disable=missing-docstring ./whattowatch/watch
+    - pylint --load-plugins pylint_django --disable=missing-docstring ./watch
