@@ -20,8 +20,3 @@ class Profile(models.Model):
     def __str__(self):
         name = self.profile_fname + " " + self.profile_lname
         return name
-
-    def image_url(self):
-        if self.profile_image:
-            return self.profile_image.url
-        return 'watch/static/LogoColor.png'
