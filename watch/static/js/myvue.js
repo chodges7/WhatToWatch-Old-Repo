@@ -5,6 +5,13 @@ var app3 = new Vue({
 	}
 })
 
+var app3 = new Vue({
+	el: '#app-2',
+	data: {
+		show: false
+	}
+})
+
 var app5 = new Vue({
 	el: '#app-5',
 	data: {
