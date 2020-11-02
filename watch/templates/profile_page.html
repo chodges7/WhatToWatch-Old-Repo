@@ -11,6 +11,20 @@
 				<div class="card-section">
 					<h4><u>Your picture:</u></h4>
 					<img src="{{ profile_picture }}" width="200" alt="Your profile picture!"/>
+					<div id="app-2">
+						<button class="button" v-on:click="show = !show">
+							Click here to upload a new profile profile picture
+						</button>
+						<transition name="fade">
+							<form action="/profilePage/" method="post" v-if="show">
+								{% csrf_token %}
+								<h5 class="text-center">Upload your new picture here:</h5>
+								{{ form_picture }}
+								<input type="submit" class="button" value="Edit" />
+							</form>
+						</transition>
+					</p>
+					</div>
 					<h4><u>Your bio:</u></h4>
 					<h5>{{ bio }}</h5><p>
 					<div id="app-3">

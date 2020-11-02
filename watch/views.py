@@ -28,9 +28,21 @@ def profile_view(request):
             return redirect('/profilePage/')
     else:
         form = forms.BioForm()
+
+    if request.method == "POST" and not form.is_valid():
+        form_picture = forms.PictureForm(request.POST)
+        if form_picture.is_valid():
+            prof.profile_image = form.cleaned_data["profile_image"]
+            prof.save()
+            form_picture = forms.PictureForm()
+            return redirect('/profilePage/')
+    else:
+        form_picture = forms.PictureForm()
+
     context = {
         "body":welc,
         "form":form,
+        "form_picture":form_picture,
         "title":"Profile Page",
         "bio":prof.profile_bio,
         "profile_picture":prof.profile_image.url,

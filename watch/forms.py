@@ -12,6 +12,9 @@ class ProfileForm(forms.Form):
 class BioForm(forms.Form):
     profile_bio = forms.CharField(label='Your new Bio', max_length=500)
 
+class PictureForm(forms.Form):
+    profile_image = forms.ImageField(label='Your new picture')
+
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(
         label="Email",
