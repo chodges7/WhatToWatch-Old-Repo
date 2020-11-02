@@ -8,7 +8,7 @@ alias deactivate 'test $?_OLD_VIRTUAL_PATH != 0 && setenv PATH "$_OLD_VIRTUAL_PA
 # Unset irrelevant variables.
 deactivate nondestructive
 
-setenv VIRTUAL_ENV "/Users/christianhodges/Documents/workspace/github/WhatToWatch"
+setenv VIRTUAL_ENV "/Users/christianhodges/Documents/workspace/github/forkedWhatToWatch"
 
 set _OLD_VIRTUAL_PATH="$PATH"
 setenv PATH "$VIRTUAL_ENV/bin:$PATH"
@@ -17,12 +17,12 @@ setenv PATH "$VIRTUAL_ENV/bin:$PATH"
 set _OLD_VIRTUAL_PROMPT="$prompt"
 
 if (! "$?VIRTUAL_ENV_DISABLE_PROMPT") then
-    if ("WhatToWatch" != "") then
-        set env_name = "WhatToWatch"
+    if ("forkedWhatToWatch" != "") then
+        set env_name = "forkedWhatToWatch"
     else
         if (`basename "VIRTUAL_ENV"` == "__") then
             # special case for Aspen magic directories
-            # see http://www.zetadev.com/software/aspen/
+            # see https://aspen.io/
             set env_name = `basename \`dirname "$VIRTUAL_ENV"\``
         else
             set env_name = `basename "$VIRTUAL_ENV"`
