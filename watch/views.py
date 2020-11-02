@@ -19,6 +19,8 @@ def profile_view(request):
     prof = models.Profile.objects.get(profile_user=request.user)
     welc = "Welcome to your profile page: "
     welc += prof.profile_fname + " " + prof.profile_lname
+    
+    # FORMS for this page
     if request.method == "POST":
         form = forms.BioForm(request.POST)
         if form.is_valid():
@@ -28,11 +30,10 @@ def profile_view(request):
             return redirect('/profilePage/')
     else:
         form = forms.BioForm()
-
     if request.method == "POST" and not form.is_valid():
-        form_picture = forms.PictureForm(request.POST)
+        form_picture = forms.PictureForm(request.POST, request.FILES)
         if form_picture.is_valid():
-            prof.profile_image = form.cleaned_data["profile_image"]
+            prof.profile_image = form_picture.cleaned_data["profile_image"]
             prof.save()
             form_picture = forms.PictureForm()
             return redirect('/profilePage/')
@@ -45,7 +46,7 @@ def profile_view(request):
         "form_picture":form_picture,
         "title":"Profile Page",
         "bio":prof.profile_bio,
-        "profile_picture":prof.profile_image.url,
+        "profile_picture":prof.profile_image,
     }
     return render(request, "profile_page.html", context=context)
 
