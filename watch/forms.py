@@ -24,7 +24,8 @@ class RegistrationForm(UserCreationForm):
     profile_bio = forms.CharField(label='Your Bio', max_length=500)
     profile_fname = forms.CharField(label='Your first name', max_length=50)
     profile_lname = forms.CharField(label='Your last name', max_length=50)
-    profile_image = forms.ImageField(label='Your profile picture')
+    profile_image = forms.ImageField(label='Your profile picture',
+        required=False)
 
     class Meta:
         model = models.User

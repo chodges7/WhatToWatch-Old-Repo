@@ -10,13 +10,17 @@
 			<div class="card secondary grid-padding-x">
 				<div class="card-section">
 					<h4><u>Your picture:</u></h4>
-					<img src="{{ profile_picture }}" width="200" alt="Your profile picture!"/>
+					{% if profile_picture %}
+					<img src="{{ profile_picture.url }}" width="200" alt="Your profile picture!"/>
+					{% else %}
+					<img src="{% static "LogoColor.png" %}" width="200" alt="Your profile picture!"/>
+					{% endif %}
 					<div id="app-2">
 						<button class="button" v-on:click="show = !show">
-							Click here to upload a new profile profile picture
+							Click here to upload a new profile picture
 						</button>
 						<transition name="fade">
-							<form action="/profilePage/" method="post" v-if="show">
+							<form action="/profilePage/" method="post" enctype='multipart/form-data' v-if="show">
 								{% csrf_token %}
 								<h5 class="text-center">Upload your new picture here:</h5>
 								{{ form_picture }}
