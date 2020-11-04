@@ -1,4 +1,4 @@
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout
 from django.shortcuts import render , redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -19,7 +19,7 @@ def profile_view(request):
     prof = models.Profile.objects.get(profile_user=request.user)
     welc = "Welcome to your profile page: "
     welc += prof.profile_fname + " " + prof.profile_lname
-    
+
     # FORMS for this page
     if request.method == "POST":
         form = forms.BioForm(request.POST)
