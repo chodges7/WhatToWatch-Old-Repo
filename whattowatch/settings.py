@@ -22,7 +22,7 @@ SECRET_KEY = 'k!^)9(3r^b)r!mlq91wtqa=e4visjd_7qf1z$@kevc@*@@(ui4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com']
 
 
 # Application definition
@@ -65,7 +65,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'whattowatch.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
@@ -116,3 +116,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/home/viditdhaka/WhatToWatch/static'
