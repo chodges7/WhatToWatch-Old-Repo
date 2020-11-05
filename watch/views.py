@@ -2,6 +2,7 @@ from django.contrib.auth import login, logout
 from django.shortcuts import render , redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from imdb import IMDb
 
 from . import models
 from . import forms
@@ -12,7 +13,15 @@ def blank(request):
 
 @login_required(login_url="/login/")
 def home(request):
-    return render(request,'home.html',{'name':'LineUp Login Signup'})
+    # Get top 50 movies
+    moviesDB = IMDb()
+    top = moviesDB.get_top250_movies()
+
+    context = {
+        "name":'LineUp Login Signup',
+        "movies":top,
+    }
+    return render(request,'home.html', context=context)
 
 @login_required(login_url="/login/")
 def profile_view(request):

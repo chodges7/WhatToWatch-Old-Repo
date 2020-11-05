@@ -28,9 +28,9 @@
 							</form>
 						</transition>
 					</p>
-					</div>
-					<h4><u>Your bio:</u></h4>
-					<h5>{{ bio }}</h5><p>
+				</div>
+				<h4><u>Your bio:</u></h4>
+				<h5>{{ bio }}</h5><p>
 					<div id="app-3">
 						<button class="button" v-on:click="show = !show">
 							Click here to edit your profile
@@ -44,26 +44,26 @@
 							</form>
 						</transition>
 					</p>
-					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Friends
-		<div class="large-10 cell medium-10 small-10 card-info secondary grid-padding-x">
-		<div class="card-info-content">
-		<h4><u>Your friends:</u> <a href="/new_friend/">Add a friend</a></h4>
-		<div id="app-5">
-		<div class="grid-container grid-x grid-padding-x">
-		<div v-for="todo in friends">
-		{% verbatim %}
-		<div class="card-info secondary card-info-content">
-		<img :src="todo.image" height="100" width="200">
-		<h3 class="lead"><a :href="'/profilePage/' + todo.friend + '/'">{{ todo.friend }}</a>
-		- <a :href="'/chat/' + todo.creator + '-' + todo.friend + '/'">Chat me!</a></h3>
-		<h6 class="text-center" v-if="todo.accepted">They <b>have</b> friended you back.</h6>
-		<h6 class="text-cneter" v-else="todo.accepted">They <b>haven't</b> friended you back yet.</h6>
 	</div>
-	{% endverbatim %}
+	<!-- Friends
+	<div class="large-10 cell medium-10 small-10 card-info secondary grid-padding-x">
+	<div class="card-info-content">
+	<h4><u>Your friends:</u> <a href="/new_friend/">Add a friend</a></h4>
+	<div id="app-5">
+	<div class="grid-container grid-x grid-padding-x">
+	<div v-for="todo in friends">
+	{% verbatim %}
+	<div class="card-info secondary card-info-content">
+	<img :src="todo.image" height="100" width="200">
+	<h3 class="lead"><a :href="'/profilePage/' + todo.friend + '/'">{{ todo.friend }}</a>
+	- <a :href="'/chat/' + todo.creator + '-' + todo.friend + '/'">Chat me!</a></h3>
+	<h6 class="text-center" v-if="todo.accepted">They <b>have</b> friended you back.</h6>
+	<h6 class="text-cneter" v-else="todo.accepted">They <b>haven't</b> friended you back yet.</h6>
+</div>
+{% endverbatim %}
 </div>
 </div>
 </div>
