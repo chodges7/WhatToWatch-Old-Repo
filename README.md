@@ -20,8 +20,8 @@
 
 ### How to get it running on your own machine
 * First you need to make a virtual enviornment (venv) to run python  
-```python3 -m venv ./``` 
-* Next, boot up the virtual enviornment by running the command  
+```python3 -m venv ./```
+* Next, boot up the venv by running the command  
 Mac: ```source bin/activate```  
 Windows: ```whattowatch/bin/activate```  
 * then install the requirements for the project  
