@@ -5,7 +5,7 @@ var app3 = new Vue({
 	}
 })
 
-var app3 = new Vue({
+var app2 = new Vue({
 	el: '#app-2',
 	data: {
 		show: false
