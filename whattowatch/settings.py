@@ -22,7 +22,8 @@ SECRET_KEY = 'k!^)9(3r^b)r!mlq91wtqa=e4visjd_7qf1z$@kevc@*@@(ui4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com']
+ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com',
+                 '127.0.0.1',]
 
 
 # Application definition
@@ -65,7 +66,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'wsgi.application'
+WSGI_APPLICATION = 'whattowatch.wsgi.application'
 
 
 # Database
