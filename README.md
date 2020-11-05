@@ -18,11 +18,13 @@
 * python3
 * pillow
 
-### How to get it running
-* boot up the virtual enviornment by running the command  
+### How to get it running on your own machine
+* First you need to make a virtual enviornment (venv) to run python  
+```python3 -m venv ./``` 
+* Next, boot up the virtual enviornment by running the command  
 Mac: ```source bin/activate```  
 Windows: ```whattowatch/bin/activate```  
-* next install the requirements  
+* then install the requirements for the project  
 ```pip install -r requirements.txt```
 * there also might be some migrations that need to happen in the database so run this command  
 Mac: ```python3 manage.py migrate```  
