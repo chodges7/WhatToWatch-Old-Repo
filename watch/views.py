@@ -14,8 +14,8 @@ def blank(request):
 @login_required(login_url="/login/")
 def home(request):
     # Get top 50 movies
-    moviesData = IMDb()
-    top = moviesData.get_top250_movies()
+    movies_data = IMDb()
+    top = movies_data.get_top250_movies()
 
     context = {
         "name":'LineUp Login Signup',
