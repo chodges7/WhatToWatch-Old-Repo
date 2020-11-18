@@ -16,15 +16,15 @@ def home(request):
     # Get top 50 movies
     movies_data = IMDb()
     top = movies_data.get_top250_movies()
-    my_database = []
-    for movie in top[0:9]:
-        id = movie.getID()
-        this_movie = movies_data.get_movie(id)
-        my_database.append(this_movie)
+    # my_database = []
+    # for movie in top[0:9]:
+        # id = movie.getID()
+        # this_movie = movies_data.get_movie(id)
+        # my_database.append(this_movie)
 
     context = {
         "name":'LineUp Login Signup',
-        "movies":my_database,
+        "movies":top,
     }
     return render(request,'home.html', context=context)
 
