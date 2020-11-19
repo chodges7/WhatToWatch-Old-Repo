@@ -9,11 +9,10 @@
       <div class="card-section">
         <img src="{{ movie.cover }}">
         <h3>Directed by:{% for dir in movie.director %} {{ dir }}, {% empty %} <i> not found </i>{% endfor %} </h3>
-        Released in {{ movie.year }} </br>
-        Starring:{% for star in movie.cast %} {{ star }}, {% empty %} <i> not found </i>{% endfor %} </br>
-        Reviewd at {{ movie.rating }} </br>
-        <a href="/movie/{{ movie.movieID }}/">The movie's page</a>
-        Written by:{% for writer in movie.writer %} {{ writer }}, {% empty %} <i> not found </i>{% endfor %} </br>
+        <b>Released in {{ movie.year }} </b></br>
+        <b>Starring:</b>{% for star in movie.cast %} {{ star }}, {% empty %} <i> not found </i>{% endfor %} </br>
+        <b>Reviewed at {{ movie.rating }} </b></br>
+        <b>Written by:</b>{% for writer in movie.writer %} {{ writer }}, {% empty %} <i> not found </i>{% endfor %} </br>
       </div>
     </div>
   </div>
