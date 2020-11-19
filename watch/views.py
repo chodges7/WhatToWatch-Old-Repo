@@ -29,6 +29,17 @@ def home(request):
     return render(request,'home.html', context=context)
 
 @login_required(login_url="/login/")
+def specific_movie(request, movie_id):
+    #Grab movie in database from person argument
+    movies_data = IMDb()
+    movie = movies_data.get_movie(movie_id)
+    context = {
+        "name":movie['title'],
+        "movie":movie
+        }
+    return render(request, "specific_movie.html", context=context)
+
+@login_required(login_url="/login/")
 def profile_view(request):
     prof = models.Profile.objects.get(profile_user=request.user)
     welc = "Welcome to your profile page: "
