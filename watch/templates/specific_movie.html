@@ -1,0 +1,21 @@
+{% load static %}
+{% include "base.html" %}
+
+{% block content %}
+<body class="" style="background-image: url('https://bestofsno.com/wp-content/uploads/2019/11/IMG_5463-900x600.jpg');">
+  <div class="grid-x">
+    <div class="card">
+      <h4>{{ movie.title }}</h4>
+      <div class="card-section">
+        <img src="{{ movie.cover }}">
+        <h3>Directed by:{% for dir in movie.director %} {{ dir }}, {% empty %} <i> not found </i>{% endfor %} </h3>
+        Released in {{ movie.year }} </br>
+        Starring:{% for star in movie.cast %} {{ star }}, {% empty %} <i> not found </i>{% endfor %} </br>
+        Reviewd at {{ movie.rating }} </br>
+        <a href="/movie/{{ movie.movieID }}/">The movie's page</a>
+        Written by:{% for writer in movie.writer %} {{ writer }}, {% empty %} <i> not found </i>{% endfor %} </br>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}

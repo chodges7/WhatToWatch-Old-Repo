@@ -1,7 +1,8 @@
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout
 from django.shortcuts import render , redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from imdb import IMDb
 
 from . import models
 from . import forms
@@ -12,14 +13,38 @@ def blank(request):
 
 @login_required(login_url="/login/")
 def home(request):
-    return render(request,'home.html',{'name':'LineUp Login Signup'})
+    # Get top 50 movies
+    movies_data = IMDb()
+    top = movies_data.get_top250_movies()
+    # my_database = []
+    # for movie in top[0:9]:
+        # id = movie.getID()
+        # this_movie = movies_data.get_movie(id)
+        # my_database.append(this_movie)
+
+    context = {
+        "name":'LineUp Login Signup',
+        "movies":top,
+    }
+    return render(request,'home.html', context=context)
+
+@login_required(login_url="/login/")
+def specific_movie(request, movie_id):
+    #Grab movie in database from person argument
+    movies_data = IMDb()
+    movie = movies_data.get_movie(movie_id)
+    context = {
+        "name":movie['title'],
+        "movie":movie
+        }
+    return render(request, "specific_movie.html", context=context)
 
 @login_required(login_url="/login/")
 def profile_view(request):
     prof = models.Profile.objects.get(profile_user=request.user)
     welc = "Welcome to your profile page: "
     welc += prof.profile_fname + " " + prof.profile_lname
-    
+
     # FORMS for this page
     if request.method == "POST":
         form = forms.BioForm(request.POST)
