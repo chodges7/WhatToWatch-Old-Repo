@@ -12,7 +12,8 @@
         <b>Released in {{ movie.year }} </b></br>
         <b>Starring:</b>{% for star in movie.cast %} {{ star }}, {% empty %} <i> not found </i>{% endfor %} </br>
         <b>Reviewed at {{ movie.rating }} </b></br>
-        <b>Written by:</b>{% for writer in movie.writer %} {{ writer }}, {% empty %} <i> not found </i>{% endfor %} </br>
+        <b>Written by:</b>{% for writer in movie.writer %} {{ writer }}, {% empty %} <i> not found </i>{% endfor %}</br>
+        <b>Synopsis: </b>{% for value in movie.plot %}{{ value }} </br> {% empty %} <i> not found </i>{% endfor %}</br>
       </div>
     </div>
   </div>
