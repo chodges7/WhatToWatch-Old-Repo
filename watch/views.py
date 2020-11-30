@@ -17,8 +17,6 @@ def home(request):
     movies_data = IMDb()
     top = movies_data.get_top250_movies()
 
-    print (dir(movies_data))
-
     context = {
         "title":'WTW Home',
         "movies":top,
@@ -30,10 +28,6 @@ def specific_movie(request, movie_id):
     #Grab movie in database from person argument
     movies_data = IMDb()
     movie = movies_data.get_movie(movie_id)
-
-    for x in movie['plot']:
-        print(x)
-
 
     context = {
         "title":movie['title'],
