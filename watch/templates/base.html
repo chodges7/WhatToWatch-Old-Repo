@@ -27,12 +27,11 @@
         {% else %}
         <a class="nav-link" href="/login/">Login<span class="sr-only">(current)</span></a>
         {% endif %}
-        {% block search %} {% endblock %}
       </ul>
     </div>
     <div class="collapse navbar-collapse" id="navbarSupportedContent"></div>
     <ul class="navbar-nav navbar-right">
-
+      {% block search %} {% endblock %}
       <li class="nav-item">
         {% if user.is_authenticated %}
         <a class="nav-link" href="/logout/">Logout<span class="sr-only">(current)</span></a>

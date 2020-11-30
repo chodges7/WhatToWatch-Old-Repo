@@ -17,11 +17,36 @@ def home(request):
     movies_data = IMDb()
     top = movies_data.get_top250_movies()
 
+    if request.method == "POST":
+        form_search = forms.SearchForm(request.POST)
+        if form_search.is_valid():
+            search = movies_data.search_movie(form_search.cleaned_data["search_field"])
+            form_search = forms.SearchForm()
+            return redirect('/searched/', search)
+    else:
+        form_search = forms.SearchForm()
+
     context = {
+        "form_search":form_search,
         "title":'WTW Home',
         "movies":top,
     }
     return render(request,'home.html', context=context)
+
+@login_required(login_url="/login/")
+def searched_view(request, slug_search=search):
+    movies_data = IMDb()
+    top = []
+
+    for movie in search[0:9]:
+        movie = movies_data.get_movie(movie_id)
+        top.append(movie)
+
+    context = {
+        "title":'Searched movies',
+        "movies":top,
+    }
+    return render(request, 'searched.html', context=context)
 
 @login_required(login_url="/login/")
 def specific_movie(request, movie_id):
