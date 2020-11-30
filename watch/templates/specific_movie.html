@@ -7,7 +7,7 @@
     <div class="card">
       <h4>{{ movie.title }}</h4>
       <div class="card-section">
-        <img src="{{ movie.cover }}">
+        <img src="{{ cover }}" width="300" alt="The cover to {{ movie.title }}">
         <h3>
           Directed by:
           {% for dir in movie.director %}

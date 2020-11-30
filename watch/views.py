@@ -21,8 +21,12 @@ def home(request):
         form_search = forms.SearchForm(request.POST)
         if form_search.is_valid():
             search = movies_data.search_movie(form_search.cleaned_data["search_field"])
+            print(search)
+            print(search[0].keys())
+            top_movie_id = search[0].getID()
+            newURL = "/movie/" + top_movie_id + "/"
             form_search = forms.SearchForm()
-            return redirect('/searched/', search)
+            return redirect(newURL)
     else:
         form_search = forms.SearchForm()
 
@@ -34,27 +38,14 @@ def home(request):
     return render(request,'home.html', context=context)
 
 @login_required(login_url="/login/")
-def searched_view(request, slug_search=search):
-    movies_data = IMDb()
-    top = []
-
-    for movie in search[0:9]:
-        movie = movies_data.get_movie(movie_id)
-        top.append(movie)
-
-    context = {
-        "title":'Searched movies',
-        "movies":top,
-    }
-    return render(request, 'searched.html', context=context)
-
-@login_required(login_url="/login/")
 def specific_movie(request, movie_id):
     #Grab movie in database from person argument
     movies_data = IMDb()
     movie = movies_data.get_movie(movie_id)
+    #print(movie.keys())
 
     context = {
+        "cover":movie['full-size cover url'],
         "title":movie['title'],
         "movie":movie,
         }
