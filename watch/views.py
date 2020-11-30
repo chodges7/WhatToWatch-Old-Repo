@@ -13,17 +13,12 @@ def blank(request):
 
 @login_required(login_url="/login/")
 def home(request):
-    # Get top 50 movies
+    # Get top movies
     movies_data = IMDb()
     top = movies_data.get_top250_movies()
-    # my_database = []
-    # for movie in top[0:9]:
-        # id = movie.getID()
-        # this_movie = movies_data.get_movie(id)
-        # my_database.append(this_movie)
 
     context = {
-        "name":'LineUp Login Signup',
+        "title":'WTW Home',
         "movies":top,
     }
     return render(request,'home.html', context=context)
@@ -69,7 +64,7 @@ def profile_view(request):
         "body":welc,
         "form":form,
         "form_picture":form_picture,
-        "title":"Profile Page",
+        "title":"WTW Profile",
         "bio":prof.profile_bio,
         "profile_picture":prof.profile_image,
     }
@@ -85,7 +80,7 @@ def login_view(request):
             return redirect('/home/')
     else:
         form = AuthenticationForm()
-    return render(request,'login.html',{'name':'LineUp login Signup','form':form})
+    return render(request,'login.html',{'name':'LineUp login Signup','form':form, "title":'WTW Login'})
 
 @login_required(login_url="/login/")
 def logout_view(request):
@@ -102,6 +97,6 @@ def signup(request):
         form_instance = forms.RegistrationForm()
     context = {
         "form":form_instance,
-        "title":"Registering User",
+        "title":"WTW Register",
         }
     return render(request, "signup.html", context=context)

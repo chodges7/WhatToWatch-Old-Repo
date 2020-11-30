@@ -3,10 +3,13 @@
 
 {% block content %}
 <body class="" style="background-image: url('https://bestofsno.com/wp-content/uploads/2019/11/IMG_5463-900x600.jpg');">
+  <div class="card">
+    <h2>Top Movies in IMDb that you should watch!</h2>
+  </div>
   {% for movie in movies %}
   <div class="card" style="width: 300px;">
     <div class="card-divider">
-      <h4>{{ movie.title }}</h4>
+      <h4>{{ forloop.counter }}) {{ movie.title }}</h4>
     </div>
     <div class="card-section">
       Released in {{ movie.year }} </br>
