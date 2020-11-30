@@ -8,11 +8,47 @@
       <h4>{{ movie.title }}</h4>
       <div class="card-section">
         <img src="{{ movie.cover }}">
-        <h3>Directed by:{% for dir in movie.director %} {{ dir }}, {% empty %} <i> not found </i>{% endfor %} </h3>
+        <h3>
+          Directed by:
+          {% for dir in movie.director %}
+          {% if forloop.last %} {{ dir }}
+          {% else %} {{ dir }},
+          {% endif %}
+          {% empty %} <i> not found </i>{% endfor %}
+        </h3>
+
+        <!--  -->
+
         <b>Released in {{ movie.year }} </b></br>
-        <b>Starring:</b>{% for star in movie.cast %} {{ star }}, {% empty %} <i> not found </i>{% endfor %} </br>
+
+        <!--  -->
+
+        <b>Starring:</b>
+        {% for star in movie.cast %}
+        {% if forloop.counter < 11 %}
+        {% if forloop.last or forloop.counter == 10 %} {{ star }}
+        {% else %} {{ star }},
+        {% endif %} {% endif %}
+        {% empty %} <i> not found </i>
+        {% endfor %} </br>
+
+        <!--  -->
+
         <b>Reviewed at {{ movie.rating }} </b></br>
-        <b>Written by:</b>{% for writer in movie.writer %} {{ writer }}, {% empty %} <i> not found </i>{% endfor %}</br>
+
+        <!--  -->
+
+        <b>Written by:</b>
+        {% for writer in movie.writer %}
+        {% if forloop.counter < 6 %}
+        {% if forloop.last or forloop.counter == 5 %} {{ writer }}
+        {% else %} {{ writer }},
+        {% endif %} {% endif %}
+        {% empty %} <i> not found </i>
+        {% endfor %} </br>
+
+        <!--  -->
+
         <b>Synopsis: </b>{% for value in movie.plot %}{{ value }} </br> {% empty %} <i> not found </i>{% endfor %}</br>
       </div>
     </div>
