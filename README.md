@@ -14,9 +14,7 @@
 
 ## Getting started
 ### Dependancies that you need:
-* pip
-* python3
-* pillow
+see requirements.txt
 
 ### How to get it running on your own machine
 * First you need to make a virtual enviornment (venv) to run python  
