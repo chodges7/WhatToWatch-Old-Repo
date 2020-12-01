@@ -23,9 +23,10 @@
 ```python3 -m venv ./``` 
 * Next, boot up the virtual enviornment by running the command  
 Mac: ```source bin/activate```  
-Windows: ```whattowatch/bin/activate```  
+Windows: ```source bin/activate```  
 * then install the requirements for the project  
-```pip install -r requirements.txt```
+Mac:```pip install -r requirements.txt```  
+Windows:```py -m pip install -r requirements.txt```  
 * there also might be some migrations that need to happen in the database so run this command  
 Mac: ```python3 manage.py migrate```  
 Windows: ```py manage.py migrate```  
