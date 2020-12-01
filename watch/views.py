@@ -44,8 +44,22 @@ def specific_movie(request, movie_id):
     movie = movies_data.get_movie(movie_id)
     #print(movie.keys())
 
+    if request.method == "POST":
+        form_search = forms.SearchForm(request.POST)
+        if form_search.is_valid():
+            search = movies_data.search_movie(form_search.cleaned_data["search_field"])
+            print(search)
+            print(search[0].keys())
+            top_movie_id = search[0].getID()
+            newURL = "/movie/" + top_movie_id + "/"
+            form_search = forms.SearchForm()
+            return redirect(newURL)
+    else:
+        form_search = forms.SearchForm()
+
     context = {
         "cover":movie['full-size cover url'],
+        "form_search":form_search,
         "title":movie['title'],
         "movie":movie,
         }

@@ -4,7 +4,11 @@
 {% block search %}
 <form method="post">
   {% csrf_token %}
-  {{ form_search }}
+  <div class="nav-link">
+    {{ form_search.search_field.label }}
+    {{ form_search.search_field }}
+    {{ form_search.errors }}
+  </div>
   <input type="submit"  value="Search" class="form-control btn btn-info">
 </form>
 {% endblock %}

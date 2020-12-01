@@ -1,6 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block search %}
+<form method="post">
+  {% csrf_token %}
+  <div class="nav-link">
+    {{ form_search.search_field.label }}
+    {{ form_search.search_field }}
+    {{ form_search.errors }}
+  </div>
+  <input type="submit"  value="Search" class="form-control btn btn-info">
+</form>
+{% endblock %}
+
 {% block content %}
 <body class="" style="background-image: url('https://bestofsno.com/wp-content/uploads/2019/11/IMG_5463-900x600.jpg');">
   <div class="grid-x">
