@@ -19,7 +19,15 @@
 
         <!--  -->
 
-        <b>Released in {{ movie.year }} </b></br>
+        <a href="/home/">Back to the homepage</a></br>
+
+        <!--  -->
+
+        <b>Released in {{ movie.year }} </b> |
+
+        <!--  -->
+
+        <b>Reviewed at {{ movie.rating }} out of 10</b></br>
 
         <!--  -->
 
@@ -34,10 +42,6 @@
 
         <!--  -->
 
-        <b>Reviewed at {{ movie.rating }} </b></br>
-
-        <!--  -->
-
         <b>Written by:</b>
         {% for writer in movie.writer %}
         {% if forloop.counter < 6 %}
@@ -49,7 +53,14 @@
 
         <!--  -->
 
-        <b>Synopsis: </b>{% for value in movie.plot %}{{ value }} </br> {% empty %} <i> not found </i>{% endfor %}</br>
+        <b>Synopses: </b>
+        {% for value in movie.plot %}
+        {% if forloop.counter < 4 %}
+        {% if forloop.last or forloop.counter == 3 %} {{ value }}
+        {% else %}{{ value }} </br></br>
+        {% endif %} {% endif %}
+        {% empty %} <i> not found </i>
+        {% endfor %}</br>
       </div>
     </div>
   </div>
