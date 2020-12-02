@@ -129,3 +129,10 @@ def signup(request):
         "title":"WTW Register",
         }
     return render(request, "signup.html", context=context)
+def Letschat(request):
+    return render(request, 'index.html')
+
+def room(request, room_name):
+    return render(request, 'room.html', {
+        'room_name': room_name
+    })
