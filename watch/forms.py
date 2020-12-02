@@ -1,5 +1,4 @@
 from django.contrib.auth.forms import UserCreationForm
-#from django.contrib.auth.models import User
 from django import forms
 
 from . import models
@@ -8,6 +7,9 @@ class ProfileForm(forms.Form):
     profile_bio = forms.CharField(label='Your new Bio', max_length=500)
     profile_fname = forms.CharField(label='Your corrected first name', max_length=50)
     profile_lname = forms.CharField(label='Your corrected last name', max_length=50)
+
+class SearchForm(forms.Form):
+    search_field = forms.CharField(label='Search any movie', max_length=50)
 
 class BioForm(forms.Form):
     profile_bio = forms.CharField(label='Your new Bio', max_length=500)
