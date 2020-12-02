@@ -21,8 +21,6 @@ def home(request):
         form_search = forms.SearchForm(request.POST)
         if form_search.is_valid():
             search = movies_data.search_movie(form_search.cleaned_data["search_field"])
-            print(search)
-            print(search[0].keys())
             top_movie_id = search[0].getID()
             newURL = "/movie/" + top_movie_id + "/"
             form_search = forms.SearchForm()
