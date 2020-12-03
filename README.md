@@ -1,6 +1,6 @@
 <img src="LogoColor.png" alt="logo" width="200">
 
-# What To Watch [![Build Status](https://travis-ci.com/chodges7/WhatToWatch.svg?branch=master)](https://travis-ci.com/chodges7/WhatToWatch)
+# What To Watch [![Build Status](https://travis-ci.com/ChicoState/WhatToWatch.svg?branch=master)](https://travis-ci.com/ChicoState/WhatToWatch)
 
 ## Developers
 * Product Owner: Christian Hodges, [chodges7](https://github.com/chodges7)
