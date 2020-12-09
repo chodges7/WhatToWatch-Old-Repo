@@ -3,7 +3,8 @@ from django.shortcuts import render , redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from imdb import IMDb
-
+from django.utils.safestring import mark_safe
+import json
 from . import models
 from . import forms
 
@@ -134,5 +135,6 @@ def Letschat(request):
 
 def room(request, room_name):
     return render(request, 'room.html', {
-        'room_name': room_name
+        'room_name_json': mark_safe(json.dumps(room_name)),
+        'username': mark_safe(json.dumps(request.user.username)),
     })
