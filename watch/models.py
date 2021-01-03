@@ -10,6 +10,6 @@ class Profile(models.Model):
     profile_image = models.ImageField(upload_to='watch/static/profile-pics',
         default='watch/static/LogoColor.png', null=True, blank=True)
 
-    def __unicode__(self):
+    def __str__(self):
         name = "Profile:" + self.profile_fname + " " + self.profile_lname
         return name
