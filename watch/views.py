@@ -130,11 +130,3 @@ def signup(request):
         "title":"WTW Register",
         }
     return render(request, "signup.html", context=context)
-def Letschat(request):
-    return render(request, 'index.html')
-
-def room(request, room_name):
-    return render(request, 'room.html', {
-        'room_name_json': mark_safe(json.dumps(room_name)),
-        'username': mark_safe(json.dumps(request.user.username)),
-    })

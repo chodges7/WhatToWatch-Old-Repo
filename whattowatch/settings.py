@@ -29,7 +29,6 @@ ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com',
 # Application definition
 
 INSTALLED_APPS = [
-    'channels',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -37,7 +36,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'watch',
-
 ]
 
 MIDDLEWARE = [
@@ -69,16 +67,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'whattowatch.wsgi.application'
-ASGI_APPLICATION = 'whattowatch.routing.application'
-
-CHANNEL_LAYERS = {
-    'default': {
-        'BACKEND': 'channels_redis.core.RedisChannelLayer',
-        'CONFIG': {
-           "hosts": [('127.0.0.1', 6379)],
-        },
-    },
-}
 
 
 # Database
@@ -130,4 +118,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = '/home/viditdhaka/WhatToWatch/static'
-MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
