@@ -3,14 +3,9 @@
 # What To Watch [![Build Status](https://travis-ci.com/ChicoState/WhatToWatch.svg?branch=master)](https://travis-ci.com/ChicoState/WhatToWatch)
 
 ## Developers
-* Product Owner: Christian Hodges, [chodges7](https://github.com/chodges7)
-* Scrum Master: Lukas Pecson, [lpecson](https://github.com/lpecson)
-* Developer: Vidit Dhaka, [vdhaka](https://github.com/vdhaka)
-
-## Entrepreneurs
-* Matthew Martell
-* Nate Rehm
-* Nicholas Whitley
+* Product Owner/Scrum Master: Christian Hodges, [chodges7](https://github.com/chodges7)
+* Past Developer: Lukas Pecson, [lpecson](https://github.com/lpecson)
+* Past Developer: Vidit Dhaka, [vdhaka](https://github.com/vdhaka)
 
 ## Getting started
 ### Dependancies that you need:
@@ -18,7 +13,7 @@ see requirements.txt
 
 ### How to get it running on your own machine
 * First you need to make a virtual enviornment (venv) to run python  
-```python3 -m venv ./``` 
+```python3 -m venv ./```
 * Next, boot up the virtual enviornment by running the command  
 Mac: ```source bin/activate```  
 Windows: ```source bin/activate```  
