@@ -19,13 +19,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 load_dotenv()
-SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+SECRET_KEY = 'k!^)9(3r^b)r!mlq91wtqa=e4visjd_7qf1z$@kevc@*@@(ui4'
+#SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['viditdhaka.pythonanywhere.com',
-                 '127.0.0.1',]
+ALLOWED_HOSTS = ['127.0.0.1',]
 
 
 # Application definition
