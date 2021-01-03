@@ -30,7 +30,7 @@ class RegistrationForm(UserCreationForm):
         required=False)
 
     class Meta:
-        model = models.User
+        model = models.settings.AUTH_USER_MODEL
         fields = ("username", "email", "password1", "password2",)
 
     def save(self, commit=True):
